@@ -1,0 +1,343 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://gamedata/scenes/title_screen.gd" type="Script" id=1]
+[ext_resource path="res://gamedata/assets/art/iceberg_icon1.png" type="Texture" id=2]
+[ext_resource path="res://gamedata/assets/art/iceberg_icon2.png" type="Texture" id=3]
+[ext_resource path="res://gamedata/assets/art/sub.png" type="Texture" id=4]
+[ext_resource path="res://gamedata/assets/art/bubble.png" type="Texture" id=5]
+[ext_resource path="res://gamedata/assets/fonts/coiny/coiny-regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.0878448, 0.107013, 0.394531, 1, 0.203323, 0.436705, 0.800781, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="title_screen" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
+
+[node name="bg_color" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -560.0
+margin_bottom = 1280.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
+
+[node name="iceberg_icon1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 590, 130 )
+texture = ExtResource( 2 )
+
+[node name="iceberg_icon2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 1020, 130 )
+texture = ExtResource( 3 )
+
+[node name="icon" type="Sprite" parent="." index="3"]
+
+position = Vector2( 880, 340 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="bubble" type="Sprite" parent="." index="4"]
+
+position = Vector2( 1118.85, 344.25 )
+scale = Vector2( 1.05571, 1.05571 )
+texture = ExtResource( 5 )
+
+[node name="bubble2" type="Sprite" parent="." index="5"]
+
+position = Vector2( 1178.66, 252.172 )
+scale = Vector2( 0.869668, 0.869668 )
+texture = ExtResource( 5 )
+
+[node name="bubble3" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1145.35, 155.352 )
+scale = Vector2( 0.690119, 0.690119 )
+texture = ExtResource( 5 )
+
+[node name="bubble4" type="Sprite" parent="." index="7"]
+
+position = Vector2( 1128.3, 287.074 )
+scale = Vector2( 0.621545, 0.621545 )
+texture = ExtResource( 5 )
+
+[node name="bg_color2" type="TextureRect" parent="." index="8"]
+
+modulate = Color( 1, 1, 1, 0.588235 )
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -560.0
+margin_bottom = 1280.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility" ]
+
+[node name="play_button" type="Button" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 160.0
+margin_right = 450.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.647059, 0.647059, 0.647059, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Play Demo"
+flat = true
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="instructions_button" type="Button" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 280.0
+margin_right = 450.0
+margin_bottom = 390.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_hover = Color( 0.647059, 0.647059, 0.647059, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Instructions"
+flat = true
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="quit_button" type="Button" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_top = 400.0
+margin_right = 450.0
+margin_bottom = 510.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_hover = Color( 0.647059, 0.647059, 0.647059, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Quit"
+flat = true
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="version-copyright" type="Label" parent="." index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 590.0
+margin_right = 490.0
+margin_bottom = 670.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Version 1.0
+© Copyright 2019, Alexandru-Razvan Pasescu"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="13"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+[node name="skybox_asset_credits" type="Label" parent="." index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 670.0
+margin_right = 250.0
+margin_bottom = 708.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Skybox asset credits:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="skybox_link" type="LinkButton" parent="skybox_asset_credits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 230.0
+margin_right = 800.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_hover = Color( 0.647059, 0.647059, 0.647059, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "https://opengameart.org/content/sky-box-sunny-day"
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[connection signal="button_up" from="play_button" to="." method="_on_play_button_button_up"]
+
+[connection signal="button_up" from="instructions_button" to="." method="_on_instructions_button_button_up"]
+
+[connection signal="button_up" from="quit_button" to="." method="_on_quit_button_button_up"]
+
+[connection signal="button_up" from="skybox_asset_credits/skybox_link" to="." method="_on_LinkButton_button_up"]
+
+

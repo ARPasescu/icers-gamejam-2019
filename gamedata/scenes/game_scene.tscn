@@ -1,0 +1,1074 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://gamedata/scenes/game_scene.gd" type="Script" id=1]
+[ext_resource path="res://gamedata/assets/art/skybox.png" type="Texture" id=2]
+[ext_resource path="res://gamedata/assets/art/algae.png" type="Texture" id=3]
+[ext_resource path="res://gamedata/assets/art/map.png" type="Texture" id=4]
+[ext_resource path="res://gamedata/scenes/artifact.gd" type="Script" id=5]
+[ext_resource path="res://gamedata/assets/art/artifact_shell.png" type="Texture" id=6]
+[ext_resource path="res://gamedata/assets/art/artifact_hook.png" type="Texture" id=7]
+[ext_resource path="res://gamedata/assets/art/artifact_squid.png" type="Texture" id=8]
+[ext_resource path="res://gamedata/assets/art/artifacct_broken_narwhal_horn.png" type="Texture" id=9]
+[ext_resource path="res://gamedata/assets/art/artifact_penguin_head_fossil.png" type="Texture" id=10]
+[ext_resource path="res://gamedata/assets/art/artifact_milipede.png" type="Texture" id=11]
+[ext_resource path="res://gamedata/scenes/player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://gamedata/assets/fonts/coiny/coiny-regular.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.161499, 0.261995, 0.656235, 1, 0.0596619, 0.583897, 0.898431, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 100.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 1, 1, 1, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0, 0, 0, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border Width", "Corner Radius" ]
+
+[sub_resource type="Gradient" id=6]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.160784, 0.258824, 0.654902, 1, 0.0588235, 0.580392, 0.898039, 0.353608 )
+
+[sub_resource type="GradientTexture" id=7]
+
+flags = 4
+gradient = SubResource( 6 )
+width = 2048
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.156863, 0.627451, 0.858824, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Anti Aliasing", "Border", "Border Width", "Content Margin", "Corner Radius", "Expand Margin" ]
+
+[sub_resource type="StyleBoxFlat" id=9]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.145098, 0.188235, 0.305882, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border Width", "Expand Margin" ]
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 34
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=12]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.858824, 0.156863, 0.156863, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=13]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.305882, 0.145098, 0.145098, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=16]
+
+size = 34
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 34
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=18]
+
+size = 34
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="game_scene" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3720.0
+margin_bottom = 2800.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
+
+[node name="skybox" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 5000.0
+margin_bottom = 960.0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect" ]
+
+[node name="water_color" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -2440.0
+margin_bottom = 5000.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Visibility" ]
+
+[node name="algae_decor" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="algae" type="Sprite" parent="algae_decor" index="0"]
+
+position = Vector2( 720, 3260 )
+texture = ExtResource( 3 )
+
+[node name="algae2" type="Sprite" parent="algae_decor" index="1"]
+
+position = Vector2( 220, 2700 )
+texture = ExtResource( 3 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="algae3" type="Sprite" parent="algae_decor" index="2"]
+
+position = Vector2( 1620, 2700 )
+texture = ExtResource( 3 )
+
+[node name="algae4" type="Sprite" parent="algae_decor" index="3"]
+
+position = Vector2( 3240, 3060 )
+texture = ExtResource( 3 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="algae5" type="Sprite" parent="algae_decor" index="4"]
+
+position = Vector2( 3720, 2640 )
+texture = ExtResource( 3 )
+
+[node name="algae6" type="Sprite" parent="algae_decor" index="5"]
+
+position = Vector2( 1580, 2480 )
+texture = ExtResource( 3 )
+
+[node name="algae7" type="Sprite" parent="algae_decor" index="6"]
+
+position = Vector2( 4030.73, 3196.74 )
+rotation = 0.221433
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="map" type="StaticBody2D" parent="." index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Anchor", "Collision", "Grow Direction", "Margin", "Rect" ]
+
+[node name="texture" type="Sprite" parent="map" index="0"]
+
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 0, 520 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="dirt_collisionshape" type="CollisionPolygon2D" parent="map" index="1"]
+
+position = Vector2( -2, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 5000.86, 3036.52, 4978.25, 3076.05, 4980.23, 3126.48, 4885.15, 3172, 4879.93, 3246.61, 4827.44, 3300.26, 4792.45, 3366.75, 4641.99, 3429.73, 4521.3, 3447.5, 4504.2, 3426.6, 4380.52, 3380.3, 4356.08, 3340.49, 4280.66, 3307.67, 4064.73, 3311.92, 3962.91, 3240.63, 3841.11, 3024.08, 3808.61, 2989.26, 3795.45, 2885.57, 3817.12, 2858.49, 3807.06, 2747.84, 3738.19, 2716.88, 3621.35, 2737.78, 3479.75, 2752.48, 3419.4, 2839.92, 3379.93, 2955.21, 3371.42, 3000.09, 3341.24, 3051.16, 3336.6, 3134.73, 3284.76, 3161.81, 3233.69, 3164.9, 3169.46, 3196.63, 2996.14, 3276.33, 2964.41, 3317.34, 2677.21, 3314.27, 2627.82, 3352.16, 2501.69, 3343.65, 2434.37, 3415.61, 2309.02, 3382.34, 2168.96, 3297.99, 2149.62, 3245.38, 2073.79, 3160.26, 2103.97, 3123.12, 2070.69, 3069.73, 1920.58, 3044.19, 1891.95, 3012.47, 1887.31, 2959.08, 1839.33, 2889.44, 1837.79, 2807.42, 1809.16, 2771.05, 1842.43, 2696.77, 1826.18, 2606.23, 1760.41, 2524.99, 1659.82, 2475.46, 1601.78, 2489.39, 1565.41, 2564.45, 1512.02, 2591.53, 1485.71, 2641.05, 1422.26, 2695.99, 1395.18, 2774.92, 1344.89, 2829.86, 1296.91, 2867.77, 1285.31, 2933.54, 1258.22, 2996.99, 1258.22, 3054.25, 1330.96, 3222.16, 1303.1, 3330.49, 1275.25, 3363.77, 1276.02, 3434.95, 1157.63, 3460.49, 1017.58, 3416.38, 873.654, 3404, 771.514, 3424.89, 739.789, 3443.47, 649.257, 3427.99, 569.557, 3375.37, 542.475, 3321.98, 571.879, 3246.92, 557.177, 3121.57, 605.151, 2995.45, 585.807, 2948.24, 410.158, 2920.39, 334.293, 2899.67, 281.71, 2857.71, 194.273, 2707.6, 120.283, 2624.77, 127.728, 2574.51, 62.7302, 2536.59, 0.053833, 2466.18, 0, 3520, 5000, 3520 )
+
+[node name="iceberg5_collisionshape" type="CollisionPolygon2D" parent="map" index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 5001.35, 562.764, 4958.75, 599.776, 4742.27, 668.912, 4590.03, 849.083, 4563.49, 923.805, 4499.25, 958.023, 4528.58, 996.432, 4596.62, 1006.51, 4645.78, 1007.77, 4749.14, 1044.33, 4808.61, 1139.59, 4949.56, 1235.29, 4955.94, 1317.79, 4929.53, 1346.05, 4919.31, 1399.79, 4851.24, 1455.39, 4922.44, 1657.76, 4948.98, 1751.34, 4944.79, 1800.22, 4964.34, 1847.01, 4936.4, 1897.99, 4959.65, 1938.14, 4895.2, 2011.82, 4858.19, 2079.55, 4854, 2126.34, 4798.83, 2209.45, 4733.19, 2279.28, 4658.97, 2381.05, 4717.35, 2530.23, 4825.29, 2615.94, 4878.44, 2636.13, 4886.91, 2723.42, 4845.68, 2695.16, 4844.29, 2744.73, 4930.12, 2819.79, 4998.56, 2988.79 )
+
+[node name="iceberg4_collisionshape" type="CollisionPolygon2D" parent="map" index="3"]
+
+position = Vector2( -0.698242, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 3377.26, 514.112, 3652, 738.933, 3962.74, 884.994, 4074.05, 848.608, 4147.25, 902.35, 4137.99, 968.138, 3911.19, 1074.01, 3893.88, 1316.81, 4036.34, 1487.91, 4085.22, 1508.16, 4092.21, 1657.6, 4127.42, 1827.23, 4215.12, 1957.89, 4287.74, 2124.79, 4277.97, 2223.26, 4071.26, 2254.68, 3921.11, 2317.53, 3624.32, 2341.28, 3462.31, 2327.31, 3261.08, 2375.68, 3112.44, 2306.36, 3064.95, 2319.63, 3065.65, 2368.51, 3002.1, 2392.25, 2983.25, 2323.82, 2907.13, 2404.13, 2408.51, 2508.88, 2331, 2495.61, 2284.47, 2301.22, 2321.92, 2189.74, 2415.5, 2051.46, 2698.31, 1936.06, 2791.9, 1872.69, 2987.57, 1800.03, 3087.81, 1550.86, 3067.75, 1502.57, 3104.76, 1371.28, 3180.88, 1264.44, 3171.8, 1202.29, 3274.45, 1135.94, 3319.15, 1028.4, 3248.62, 961.359, 3208.11, 895.715, 3265.37, 849.195, 3268.24, 671.63 )
+
+[node name="iceberg3_collisionshape" type="CollisionPolygon2D" parent="map" index="4"]
+
+build_mode = 0
+polygon = PoolVector2Array( 2348.74, 553.685, 2459.88, 564.024, 2551.64, 648.027, 2781.68, 704.89, 2895.41, 750.123, 3001.38, 922.006, 2979.41, 960.777, 2891.53, 1026.69, 2848.6, 1037.62, 2791.15, 1011.9, 2712.27, 1049.62, 2717.42, 1097.64, 2683.98, 1149.94, 2621.39, 1196.24, 2625.68, 1243.39, 2550.23, 1311.12, 2552.8, 1360.85, 2491.07, 1396, 2387.33, 1359.99, 2249.29, 1182.52, 2183.27, 1183.37, 2132.69, 1233.96, 1937.2, 1191.95, 1876.33, 1111.35, 1848.89, 1011.04, 1680.85, 982.748, 1649.13, 932.163, 1736.58, 823.276, 1713.43, 780.408, 1784.59, 700.672, 1948.35, 692.098, 2010.08, 635.511, 2128.4, 617.506 )
+
+[node name="iceberg2_collisionshape" type="CollisionPolygon2D" parent="map" index="5"]
+
+build_mode = 0
+polygon = PoolVector2Array( 837.15, 605.344, 985.889, 707.445, 1068.45, 879.503, 1160.14, 938.158, 1165.58, 967.426, 1094.92, 997.36, 1116.5, 1092.55, 1050.95, 1231.25, 1110.8, 1297.75, 1416.7, 1343.35, 1478.2, 1370.73, 1541.15, 1429.8, 1560.15, 1513.4, 1545.9, 1559, 1589.66, 1639.94, 1657.4, 1741.97, 1658.25, 1812.28, 1617.1, 1822.57, 1490.21, 1798.56, 1444.77, 1827.71, 1424.19, 1879.15, 1320.45, 1938.31, 1286.15, 1980.32, 1197.84, 1982.9, 1138.68, 2031.77, 1115.53, 2015.48, 1072.67, 2062.63, 1064.95, 2115.79, 1025.51, 2160.37, 1008.36, 2242.68, 962.922, 2281.26, 950.919, 2395.29, 845.461, 2435.59, 684.275, 2517.04, 634.547, 2496.46, 618.257, 2397.87, 578.818, 2295.84, 619.972, 2222.96, 646.55, 2210.96, 586.534, 2129.51, 576.245, 2049.77, 610.54, 1979.47, 575.388, 1890.3, 525.66, 1817.42, 566.814, 1761.69, 500.796, 1692.24, 482.791, 1641.66, 498.224, 1612.51, 444.21, 1560.21, 422.775, 1529.34, 519.659, 1345.01, 534.234, 1242.12, 612.255, 1184.68, 624.258, 1115.23, 673.986, 1066.36, 635.404, 998.628, 580.532, 984.91, 546.237, 937.754, 562.527, 898.315, 681.703, 872.593, 779.444, 631.671 )
+
+[node name="iceberg1_collisionshape" type="CollisionPolygon2D" parent="map" index="6"]
+
+build_mode = 0
+polygon = PoolVector2Array( -0.635712, 933.069, 59.0884, 947.289, 208.683, 922.262, 299.691, 971.748, 291.728, 1001.89, 349.177, 1056.5, 348.608, 1096.32, 243.38, 1160.59, 67.0516, 1228.85, 21.5475, 1334.64, 27.8043, 1383.56, 87.5284, 1435.89, 20.9787, 1495.61, 35.7675, 1561.03, 76.1524, 1631.56, 123.932, 1637.24, 188.775, 1705.5, 181.949, 1845.99, 125.638, 1878.98, 173.986, 2005.26, 290.022, 2050.19, 302.535, 2097.97, 205.27, 2178.17, 114.831, 2205.48, 95.4916, 2228.23, 91.5101, 2266.34, 28.3732, 2324.36, 0.501953, 2401.71 )
+
+[node name="artifacts" type="Node2D" parent="." index="4"]
+
+light_mask = 2
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="artifact1" type="Area2D" parent="artifacts" index="0"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 4920, 3140 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact1" index="0"]
+
+light_mask = 2
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact1" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact1" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -60.0
+margin_right = 80.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="artifact2" type="Area2D" parent="artifacts" index="1"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 1220, 3420 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact2" index="0"]
+
+light_mask = 2
+rotation = 1.08072
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact2" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact2" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -60.0
+margin_right = 80.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="artifact3" type="Area2D" parent="artifacts" index="2"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 2160, 3220 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact3" index="0"]
+
+light_mask = 2
+rotation = 1.08072
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact3" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact3" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -60.0
+margin_right = 80.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="artifact4" type="Area2D" parent="artifacts" index="3"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 3020, 1660 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact4" index="0"]
+
+light_mask = 2
+rotation = 1.08072
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact4" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact4" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -60.0
+margin_right = 80.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="artifact5" type="Area2D" parent="artifacts" index="4"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 1880, 1060 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact5" index="0"]
+
+light_mask = 2
+rotation = -2.68221
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact5" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact5" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = -64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="artifact6" type="Area2D" parent="artifacts" index="5"]
+
+editor/display_folded = true
+light_mask = 2
+position = Vector2( 1100, 2040 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="artifacts/artifact6" index="0"]
+
+light_mask = 2
+rotation = -0.587475
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artifacts/artifact6" index="1"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="artifacts/artifact6" index="2"]
+
+light_mask = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -60.0
+margin_right = 80.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Visibility", "custom_styles" ]
+
+[node name="player" parent="." index="5" instance=ExtResource( 12 )]
+
+position = Vector2( 420, 960 )
+
+[node name="water_2" type="TextureRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -2440.0
+margin_bottom = 5000.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 7 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
+
+[node name="timer" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 301.0
+one_shot = true
+autostart = true
+
+[node name="UI_layer" type="CanvasLayer" parent="." index="8"]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="UI" type="Control" parent="UI_layer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="air_bar" type="ProgressBar" parent="UI_layer/UI" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_top = 39.0
+margin_right = 399.0
+margin_bottom = 91.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 8 )
+custom_styles/bg = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 75.0
+exp_edit = false
+rounded = false
+percent_visible = true
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Textures", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="air_label" type="Label" parent="UI_layer/UI/air_bar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = -67.0
+margin_top = -8.0
+margin_right = -8.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "AIR"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="health_bar" type="ProgressBar" parent="UI_layer/UI" index="1"]
+
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -401.0
+margin_top = -681.0
+margin_right = -101.0
+margin_bottom = -629.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 12 )
+custom_styles/bg = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 75.0
+exp_edit = false
+rounded = true
+percent_visible = true
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Textures", "custom_colors", "custom_fonts", "custom_styles" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="health_label" type="Label" parent="UI_layer/UI/health_bar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 308.0
+margin_top = -7.0
+margin_right = 358.0
+margin_bottom = 6.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "HP"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="time" type="Label" parent="UI_layer/UI" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 2
+text = "00:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="artifacts_label" type="Label" parent="UI_layer/UI" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 899.0
+margin_top = 599.0
+margin_right = 1119.0
+margin_bottom = 679.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "ARTIFACTS:"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="artifact_count" type="Label" parent="UI_layer/UI/artifacts_label" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 220.0
+margin_right = 340.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "3 / 8"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="win_notifier" type="Label" parent="UI_layer/UI" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 39.0
+margin_top = 579.0
+margin_right = 539.0
+margin_bottom = 699.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = -15
+custom_constants/shadow_offset_y = 2
+text = "RETURN TO THE SURFACE
+TO WIN THE SCENARIO!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+

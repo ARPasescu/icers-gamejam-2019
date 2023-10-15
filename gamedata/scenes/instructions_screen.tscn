@@ -1,0 +1,842 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://gamedata/scenes/instructions_screen.gd" type="Script" id=1]
+[ext_resource path="res://gamedata/assets/fonts/coiny/coiny-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://gamedata/assets/art/sub.png" type="Texture" id=3]
+[ext_resource path="res://gamedata/assets/art/arrow.png" type="Texture" id=4]
+
+[sub_resource type="Gradient" id=7]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.0878448, 0.107013, 0.394531, 1, 0.203323, 0.436705, 0.800781, 1 )
+
+[sub_resource type="GradientTexture" id=8]
+
+flags = 4
+gradient = SubResource( 7 )
+width = 2048
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 42
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.996078, 0.996078, 0.996078, 1 )
+draw_center = true
+border_width_left = 1
+border_width_top = 1
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.125, 0.125, 0.125, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=20]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=21]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.858824, 0.156863, 0.156863, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=9]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.305882, 0.145098, 0.145098, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 34
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=12]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=13]
+
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.156863, 0.627451, 0.858824, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Anti Aliasing", "Border", "Border Width", "Content Margin", "Corner Radius", "Expand Margin" ]
+
+[sub_resource type="StyleBoxFlat" id=14]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.145098, 0.188235, 0.305882, 1 )
+draw_center = true
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border Width", "Expand Margin" ]
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=16]
+
+size = 34
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=18]
+
+size = 48
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[node name="instructions_screen" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="bg_color" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -560.0
+margin_bottom = 1280.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 8 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
+
+[node name="title1" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 460.0
+margin_right = 820.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "INSTRUCTIONS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="title2" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 180.0
+margin_top = 210.0
+margin_right = 470.0
+margin_bottom = 289.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "CONTROLS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="title3" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 890.0
+margin_top = 210.0
+margin_right = 1010.0
+margin_bottom = 289.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "TIPS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="description" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 80.0
+margin_right = 1230.0
+margin_bottom = 212.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 0
+custom_constants/shadow_offset_y = 1
+text = "Greetings, Commander! You have been assigned to lead a reconnaissance operation in the cold waters of the Arctic Ocean using our latest deep-dive submersible model: the ICER-S10. Your mission is to explore the depths of the ocean and recover any relics, artifacts or analyzable data you may find."
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="instructions1" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 70.0
+margin_top = 290.0
+margin_right = 579.0
+margin_bottom = 332.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Use the arrow keys to control the ICER unit"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="sub" type="Sprite" parent="instructions1" index="0"]
+
+position = Vector2( 150, 110 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
+
+[node name="arrow" type="Sprite" parent="instructions1" index="1"]
+
+position = Vector2( 260, 140 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="arrow2" type="Sprite" parent="instructions1" index="2"]
+
+position = Vector2( 380, 140 )
+rotation = -3.14159
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="arrow3" type="Sprite" parent="instructions1" index="3"]
+
+position = Vector2( 320, 140 )
+rotation = -1.5708
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="arrow4" type="Sprite" parent="instructions1" index="4"]
+
+position = Vector2( 320, 80 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="instructions2" type="Label" parent="." index="6"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 480.0
+margin_right = 600.0
+margin_bottom = 522.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Hold Spacebar to examine and collect artifacts"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="spacebar" type="ProgressBar" parent="instructions2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 150.0
+margin_top = 60.0
+margin_right = 400.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/bg = SubResource( 5 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Margin", "Percent", "custom_styles" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spacebar_text" type="Label" parent="instructions2/spacebar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spacebar"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "custom_colors", "custom_constants" ]
+
+[node name="instructions3" type="Label" parent="." index="7"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_top = 290.0
+margin_right = 1200.0
+margin_bottom = 332.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Avoid hitting the icebergs and ocean floor!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="health_bar" type="ProgressBar" parent="instructions3" index="0"]
+
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -440.0
+margin_top = 18.0
+margin_right = -140.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 21 )
+custom_styles/bg = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 13.0
+exp_edit = false
+rounded = true
+percent_visible = true
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Textures", "custom_colors", "custom_fonts", "custom_styles" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="health_label" type="Label" parent="instructions3/health_bar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 308.0
+margin_top = -7.0
+margin_right = 358.0
+margin_bottom = 6.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "HP"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="instructions4" type="Label" parent="." index="8"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 660.0
+margin_top = 420.0
+margin_right = 1240.0
+margin_bottom = 462.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Return to the surface to replenish your air supply!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="air_bar" type="ProgressBar" parent="instructions4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 160.0
+margin_top = 60.0
+margin_right = 460.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 13 )
+custom_styles/bg = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 75.0
+exp_edit = false
+rounded = false
+percent_visible = true
+_sections_unfolded = [ "Anchor", "Margin", "Percent", "Rect", "Textures", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="air_label" type="Label" parent="instructions4/air_bar" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = -67.0
+margin_top = -8.0
+margin_right = -8.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "AIR"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="instructions5" type="Label" parent="." index="9"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 660.0
+margin_top = 550.0
+margin_right = 1240.0
+margin_bottom = 592.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Collect all of the relics before the timer runs out!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="time" type="Label" parent="instructions5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 30.0
+margin_right = -210.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 2
+text = "01:38"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="return_button" type="Button" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 40.0
+margin_top = 609.0
+margin_right = 240.0
+margin_bottom = 690.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color_hover = Color( 0.647059, 0.647059, 0.647059, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Return"
+flat = true
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="11"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
+
+[connection signal="button_up" from="return_button" to="." method="_on_return_button_button_up"]
+
+
